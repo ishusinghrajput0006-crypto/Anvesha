@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Something Special for Anvesha 💗</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffe4ef, #ffc4dc, #fff0f6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-x: hidden;
+    color: #77334f;
+}
+
+.heart {
+    position: fixed;
+    bottom: -40px;
+    color: #ed6b9e;
+    opacity: .5;
+    animation: float 9s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    20% { opacity: .6; }
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.card {
+    width: 100%;
+    max-width: 460px;
+    background: rgba(255,255,255,.91);
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 30px 23px;
+    text-align: center;
+    box-shadow: 0 15px 45px rgba(190,65,120,.17);
+    position: relative;
+    z-index: 2;
+    margin: 20px 0;
+}
+
+.heart-icon {
+    font-size: 65px;
+    animation: heartbeat 1.5s infinite;
+    margin-bottom: 12px;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.13); }
+}
+
+h1 {
+    color: #df4c88;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #df4c88;
+    font-size: 21px;
+    margin-bottom: 13px;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.85;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    background: #fff0f6;
+    border-radius: 18px;
+    padding: 16px;
+    margin: 18px 0;
+    line-height: 1.8;
+}
+
+.page {
+    display: none;
+    animation: appear .5s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.next, .yes, .no {
+    border: none;
+    border-radius: 30px;
+    padding: 13px 25px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 7px;
+    transition: .25s;
+}
+
+.next, .yes {
+    color: white;
+    background: #e94e91;
+    box-shadow: 0 5px 15px #e94e9140;
+}
+
+.no {
+    background: #ffe1ed;
+    color: #cf3978;
+}
+
+button:hover {
+    transform: translateY(-3px);
+}
+
+.points {
+    text-align: left;
+    background: #fff3f8;
+    padding: 15px;
+    border-radius: 17px;
+    margin: 15px 0;
+    line-height: 2;
+    font-size: 14px;
+}
+
+.question {
+    font-size: 19px;
+    font-weight: bold;
+    color: #d83f80;
+    margin: 20px 0;
+}
+
+#answer {
+    display: none;
+    margin-top: 20px;
+    padding: 18px;
+    background: #fff0f6;
+    border-radius: 18px;
+    line-height: 1.8;
+}
+
+.dots {
+    color: #df4c88;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.footer {
+    margin-top: 22px;
+    font-size: 12px;
+    color: #bb7290;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <!-- PAGE 1 -->
+    <section class="page active" id="page1">
+        <div class="heart-icon">💗</div>
+        <h1>Hey Anvesha! 🌷</h1>
+
+        <p>
+            So, I wanted to tell you something.
+            It's not a big proposal or anything serious.
+            Just a little message from my side.
+        </p>
+
+        <div class="highlight">
+            Sometimes a good conversation with someone
+            makes you curious to know them a little more. 😊
+        </div>
+
+        <p>And that's what I feel right now.</p>
+
+        <button class="next" onclick="showPage(2)">
+            Continue 💕
+        </button>
+    </section>
+
+    <!-- PAGE 2 -->
+    <section class="page" id="page2">
+        <div class="heart-icon">🩷</div>
+        <h2>I Like Your Thinking</h2>
+
+        <p>
+            From our conversations, I got to know
+            a little about the kind of person you admire.
+        </p>
+
+        <div class="points">
+            💗 Confidence and a strong personality<br>
+            💗 Loyalty and honesty<br>
+            💗 Caring and protective nature<br>
+            💗 Emotional maturity<br>
+            💗 Understanding and respect<br>
+            💗 Seriousness about commitment
+        </div>
+
+        <p>
+            And honestly, I think these are meaningful
+            qualities to value in someone.
+        </p>
+
+        <button class="next" onclick="showPage(3)">
+            One more thing 💌
+        </button>
+    </section>
+
+    <!-- PAGE 3 -->
+    <section class="page" id="page3">
+        <div class="heart-icon">❤️</div>
+        <h2>My Point of View</h2>
+
+        <p>
+            I believe being protective means caring,
+            not controlling someone.
+        </p>
+
+        <p>
+            Being possessive should never mean taking
+            away someone's freedom.
+        </p>
+
+        <div class="highlight">
+            Trust, loyalty, respect and understanding
+            matter more than restrictions or fake promises.
+        </div>
+
+        <p>
+            I don't want to impress you with big words.
+            I'd rather let my actions and behaviour
+            speak over time.
+        </p>
+
+        <button class="next" onclick="showPage(4)">
+            Read this 💗
+        </button>
+    </section>
+
+    <!-- PAGE 4 -->
+    <section class="page" id="page4">
+        <div class="heart-icon">🌸</div>
+        <h2>No Hurry, No Pressure</h2>
+
+        <p>
+            I know you have said that you're not interested
+            in a relationship right now.
+        </p>
+
+        <p>
+            And I genuinely respect that.
+            I don't want to change your decision
+            or make you feel uncomfortable.
+        </p>
+
+        <div class="highlight">
+            For now, let's just be friends.
+            Let's talk, laugh, understand each other
+            and make some good memories.
+        </div>
+
+        <p>
+            Dheere-dheere aage dekhenge.
+            Agar future mein dono ki feelings same hui
+            aur sab kuch sahi raha, toh us waqt sochenge.
+            No expectations and no pressure. 😊
+        </p>
+
+        <button class="next" onclick="showPage(5)">
+            One last question 💞
+        </button>
+    </section>
+
+    <!-- PAGE 5 -->
+    <section class="page" id="page5">
+        <div class="heart-icon">💝</div>
+        <h1>Anvesha</h1>
+
+        <p>
+            I don't know what the future holds,
+            and I don't want to make promises about it.
+        </p>
+
+        <p>
+            But I'd genuinely like to know you better
+            and see where this friendship goes.
+        </p>
+
+        <div class="question">
+            So, shall we start with a beautiful friendship? 🥹
+        </div>
+
+        <button class="yes" onclick="chooseYes()">
+            YES ❤️
+        </button>
+
+        <button class="no" onclick="chooseNo()">
+            NO 🙈
+        </button>
+
+        <div id="answer"></div>
+    </section>
+
+    <div class="dots" id="dots">● ○ ○ ○ ○</div>
+
+    <div class="footer">
+        A little pink page, just for you 💗
+    </div>
+
+</div>
+
+<script>
+function showPage(number) {
+    document.querySelectorAll(".page").forEach(page => {
+        page.classList.remove("active");
+    });
+
+    document.getElementById("page" + number)
+        .classList.add("active");
+
+    document.getElementById("dots").innerText =
+        ["○ ○ ○ ○ ○",
+         "● ○ ○ ○ ○",
+         "● ● ○ ○ ○",
+         "● ● ● ○ ○",
+         "● ● ● ● ○",
+         "● ● ● ● ●"][number];
+
+    if (number === 5) {
+        document.getElementById("dots").innerText =
+            "● ● ● ● ●";
+    }
+}
+
+function chooseYes() {
+    const answer = document.getElementById("answer");
+    answer.style.display = "block";
+    answer.innerHTML =
+        "Yayyy! 🥹💗<br><br>" +
+        "Then let's start with friendship! " +
+        "No rush, no pressure, just two people " +
+        "getting to know each other. 🌷<br><br>" +
+        "Let's make it genuine and beautiful. ❤️";
+}
+
+function chooseNo() {
+    const answer = document.getElementById("answer");
+    answer.style.display = "block";
+    answer.innerHTML =
+        "That's completely okay, Anvesha. 💗<br><br>" +
+        "Your choice matters, and I respect it. " +
+        "No pressure and no hard feelings. 🌸";
+}
+
+// Floating hearts
+for (let i = 0; i < 22; i++) {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "♥";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (15 + Math.random() * 25) + "px";
+    heart.style.animationDuration = (5 + Math.random() * 7) + "s";
+    heart.style.animationDelay = Math.random() * 8 + "s";
+    document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
